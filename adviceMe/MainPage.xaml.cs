@@ -37,7 +37,7 @@ namespace adviceMe
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             // TODO: Подготовьте здесь страницу для отображения.
-
+            
             // TODO: Если приложение содержит несколько страниц, обеспечьте
             // обработку нажатия аппаратной кнопки "Назад", выполнив регистрацию на
             // событие Windows.Phone.UI.Input.HardwareButtons.BackPressed.
@@ -53,6 +53,11 @@ namespace adviceMe
         private void TextBlock_SelectionChanged_1(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(BlankPage1));
         }
     }
 }
