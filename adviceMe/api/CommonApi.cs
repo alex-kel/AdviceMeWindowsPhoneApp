@@ -8,5 +8,9 @@ namespace adviceMe.api
 {
     class CommonApi
     {
+        public static String url = "";
+        public static String getUrl(String path){
+            return url + path;
+        }
     }
 }
