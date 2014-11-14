@@ -10,7 +10,7 @@ namespace adviceMe.api
     {
         public static User login(String email, String password)
         {
-            
+            return new User();
         }
     }
 }
