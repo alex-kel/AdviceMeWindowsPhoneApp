@@ -29,6 +29,6 @@
                    " VerticalAlignment="Top" Height="32" Width="127" Grid.RowSpan="2"/>
         <PasswordBox HorizontalAlignment="Left" Margin="10,23.543,0,0" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="-0.392,-0.192" Grid.ColumnSpan="2" Width="370" Height="39" Grid.RowSpan="2"/>
         <Button Content="Sign in" HorizontalAlignment="Left" Margin="10,39.898,0,0" Grid.Row="5" VerticalAlignment="Top" Height="58" Width="109"/>
-        <Button Content="Sign up" Grid.Column="1" HorizontalAlignment="Left" Margin="76,39.898,0,0" Grid.Row="5" VerticalAlignment="Top" Height="58" Width="109" Click="Button_Click"/>
+        <Button Content="Sign up" Grid.Column="1" HorizontalAlignment="Left" Margin="76,39.898,0,0" Grid.Row="5" VerticalAlignment="Top" Height="58" Width="109"/>
     </Grid>
 </Page>
