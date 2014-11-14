@@ -22,7 +22,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Foreground="Black"  FontStyle="Italic" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-5,-15,-5,63.167" TextWrapping="Wrap" FontSize="40" TextAlignment="Center" Text="adviceMe"  Grid.ColumnSpan="2" Height="81" Width="400" Grid.RowSpan="2"/>
+        <TextBlock FontFamily="./Fonts/Pacifico.ttf#Pacifico" Foreground="Black"  FontStyle="Italic" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-5,-15,-5,63.167" TextWrapping="Wrap" FontSize="40" TextAlignment="Center" Text="adviceMe"  Grid.ColumnSpan="2" Height="81" Width="400" Grid.RowSpan="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,42.833,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Login:" FontSize="25" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged_1" Height="30" Width="67" Grid.RowSpan="2"/>
         <TextBox HorizontalAlignment="Left" Margin="10,23.833,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="370" Height="39" />
         <TextBlock HorizontalAlignment="Left" Margin="10,41.522,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Password:" FontSize="25
