@@ -38,7 +38,7 @@ namespace adviceMe
 
         private void cancel(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(LoginPage));
         }
     }
 }

@@ -88,7 +88,7 @@
                 	<LineBreak/>
                 	<Run Text="Add photo for rate &gt;"/>
                 </TextBlock>
-                <TextBlock FontSize="30"  TextWrapping="Wrap" Text="Rate users photo &gt;" Height="61" Width="362"/>
+                <TextBlock Tapped="TextBlock_Tapped_2" FontSize="30"  TextWrapping="Wrap" Text="Rate users photo &gt;" Height="61" Width="362"/>
                 <TextBlock FontSize="30"  TextWrapping="Wrap" Text="My photos &gt;" Height="56" Width="362"/>
             </ListView>
         </PivotItem>
