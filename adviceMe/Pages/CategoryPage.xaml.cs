@@ -55,5 +55,10 @@ namespace adviceMe
         {
             Frame.Navigate(typeof(PhotoRate));
         }
+
+        private void TextBlock_Tapped_3(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CameraPage));
+        }
     }
 }

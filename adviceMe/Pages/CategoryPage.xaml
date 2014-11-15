@@ -83,7 +83,7 @@
         </PivotItem>
         <PivotItem Header="Shopping">
             <ListView x:Name="shoppingMenu">
-                <TextBlock FontSize="30"  TextWrapping="Wrap" Height="109" Width="362">
+                <TextBlock Tapped="TextBlock_Tapped_3" FontSize="30"  TextWrapping="Wrap" Height="109" Width="362">
                 	<Run/>
                 	<LineBreak/>
                 	<Run Text="Add photo for rate &gt;"/>

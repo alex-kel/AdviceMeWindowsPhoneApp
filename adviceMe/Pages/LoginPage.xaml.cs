@@ -66,7 +66,7 @@ namespace adviceMe
             String param = Api.API.serialize(user, typeof(User));
 
             /*changes - это callback*/
-            Api.API.doPost("/users.json", param).ContinueWith((requestTask) => changes(requestTask.Result));
+          //  Api.API.doPost("/users.json", param).ContinueWith((requestTask) => changes(requestTask.Result));
             Frame.Navigate(typeof(CategoryPage));
 
         }
