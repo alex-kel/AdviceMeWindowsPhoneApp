@@ -36,11 +36,7 @@ namespace adviceMe
         {
         }
 
-<<<<<<< HEAD
-        private void Button_Click(object sender, RoutedEventArgs e)
-=======
         private void cancel(object sender, RoutedEventArgs e)
->>>>>>> 0d9663029fd1d4d566bc300f7d26468702c8910e
         {
             Frame.Navigate(typeof(MainPage));
         }
