@@ -13,20 +13,18 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Документацию по шаблону элемента "Пустая страница" см. по адресу http://go.microsoft.com/fwlink/?LinkId=391641
+// Документацию по шаблону элемента пустой страницы см. по адресу http://go.microsoft.com/fwlink/?LinkID=390556
 
 namespace adviceMe
 {
     /// <summary>
     /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class CategoryPage : Page
     {
-        public MainPage()
+        public CategoryPage()
         {
             this.InitializeComponent();
-
-            this.NavigationCacheMode = NavigationCacheMode.Required;
         }
 
         /// <summary>
@@ -36,28 +34,21 @@ namespace adviceMe
         /// Этот параметр обычно используется для настройки страницы.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            // TODO: Подготовьте здесь страницу для отображения.
-            
-            // TODO: Если приложение содержит несколько страниц, обеспечьте
-            // обработку нажатия аппаратной кнопки "Назад", выполнив регистрацию на
-            // событие Windows.Phone.UI.Input.HardwareButtons.BackPressed.
-            // Если вы используете NavigationHelper, предоставляемый некоторыми шаблонами,
-            // данное событие обрабатывается для вас.
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(restaurantsTop));
         }
 
-        private void TextBlock_SelectionChanged_1(object sender, RoutedEventArgs e)
+        private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(restaurantsTop));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void TextBlock_Tapped_1(object sender, TappedRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(registration));
+            Frame.Navigate(typeof(allRestaurants));
         }
     }
 }

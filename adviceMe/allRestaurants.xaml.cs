@@ -20,9 +20,9 @@ namespace adviceMe
     /// <summary>
     /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
-    public sealed partial class registration : Page
+    public sealed partial class allRestaurants : Page
     {
-        public registration()
+        public allRestaurants()
         {
             this.InitializeComponent();
         }
@@ -34,11 +34,6 @@ namespace adviceMe
         /// Этот параметр обычно используется для настройки страницы.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
         }
     }
 }

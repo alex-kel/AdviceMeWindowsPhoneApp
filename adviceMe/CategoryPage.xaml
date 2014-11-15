@@ -1,0 +1,34 @@
+﻿<Page
+    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:adviceMe"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    x:Class="adviceMe.CategoryPage"
+    mc:Ignorable="d"
+    Background="Orange">
+    
+    <Pivot  Title="adviceMe" FontFamily="./Fonts/Pacifico.ttf#Pacifico">
+        <PivotItem Header="Restauraunts">
+            <ListView x:Name="restaurantsMenu">
+                <TextBlock FontSize="30"  TextWrapping="Wrap" Text="Find restaurant by my location &gt;" Height="109" Width="362"/>
+                <TextBlock Tapped="TextBlock_Tapped_1" FontSize="30"  TextWrapping="Wrap" Text="Show all restaurants &gt;" Height="72" Width="362"/>
+                <TextBlock FontSize="30"  TextWrapping="Wrap" Text="Show TOP 10 &gt;" Height="72" Width="362" SelectionChanged="TextBlock_SelectionChanged" Tapped="TextBlock_Tapped"/>
+
+            </ListView>
+        </PivotItem>
+        <PivotItem Header="Shopping">
+            <ListView x:Name="shoppingMenu">
+                <TextBlock FontSize="30"  TextWrapping="Wrap" Height="109" Width="362">
+                	<Run/>
+                	<LineBreak/>
+                	<Run Text="Add photo for rate &gt;"/>
+                </TextBlock>
+                <TextBlock FontSize="30"  TextWrapping="Wrap" Text="Rate users photo &gt;" Height="61" Width="362"/>
+                <TextBlock FontSize="30"  TextWrapping="Wrap" Text="My photos &gt;" Height="56" Width="362"/>
+            </ListView>
+        </PivotItem>
+    </Pivot>
+</Page>

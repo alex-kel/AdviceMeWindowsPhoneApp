@@ -26,13 +26,13 @@
         <TextBox HorizontalAlignment="Left" Margin="10,13.167,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" Height="39"/>
         <PasswordBox  HorizontalAlignment="Left" Margin="10,10.667,0,0" Grid.Row="6" VerticalAlignment="Top" Width="380" Height="39"/>
         <PasswordBox HorizontalAlignment="Left" Margin="10,16,0,0" Grid.Row="8" VerticalAlignment="Top" Width="380" Height="39"/>
-        <TextBlock TextAlignment="Center" FontFamily="./Fonts/Pacifico.ttf#Pacifico" Foreground="Black"  FontStyle="Italic" FontSize="30" HorizontalAlignment="Center" Margin="10,14,10,0" TextWrapping="Wrap" Text="Regestration" VerticalAlignment="Top" Height="54" Width="380"/>
+        <TextBlock TextAlignment="Center"  Foreground="Black"  FontStyle="Italic" FontSize="30" HorizontalAlignment="Center" Margin="10,14,10,0" TextWrapping="Wrap" Text="Regestration" VerticalAlignment="Top" Height="54" Width="380"/>
         <TextBlock FontSize="25" HorizontalAlignment="Left" Margin="15,26.833,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Height="27" Width="146"/>
         <TextBlock FontSize="25" HorizontalAlignment="Left" Margin="10,9,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" Height="24" Width="126"/>
         <TextBlock FontSize="25" HorizontalAlignment="Left" Margin="10,9,0,0" Grid.Row="5" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Height="24" Width="126"/>
         <TextBlock FontSize="25" HorizontalAlignment="Left" Margin="10,10.333,0,0" Grid.Row="7" TextWrapping="Wrap" Text="Confirm password:" VerticalAlignment="Top" Height="33" Width="234" Grid.RowSpan="2"/>
         <Grid HorizontalAlignment="Left" Height="100" Margin="81,9.833,0,-48.167" Grid.Row="10" VerticalAlignment="Top" Width="100"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="10,18.25,0,0" Grid.Row="9" VerticalAlignment="Top"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="10,18.25,0,0" Grid.Row="9" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="Sing up!" HorizontalAlignment="Left" Margin="281,18.25,0,0" VerticalAlignment="Top" Grid.Row="9"/>
     </Grid>
 </Page>

@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="orange">
+    Background="orange"
+    >
 
     <Grid Margin="0,38.333,0,147.667" HorizontalAlignment="Left" Width="390" >
         <Grid.RowDefinitions>
