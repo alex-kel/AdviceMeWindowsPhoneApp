@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -15,11 +17,16 @@ namespace adviceMe.Model
 
         }
         [DataMember]
-        public String name;
+        public String id;
         [DataMember]
         public String email;
         [DataMember]
-        public String password;
+        public String name;
+
+        public static UserInfo desirialize(String json)
+        {
+            return JsonConvert.DeserializeObject<UserInfo>(json.Substring(8, json.Length - 9));
+        }
 
 
     }
