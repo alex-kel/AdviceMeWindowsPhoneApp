@@ -88,22 +88,22 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="allRestaurants.xaml.cs">
+    <Compile Include="Pages\allRestaurants.xaml.cs">
       <DependentUpon>allRestaurants.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CategoryPage.xaml.cs">
+    <Compile Include="Pages\CategoryPage.xaml.cs">
       <DependentUpon>CategoryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.xaml.cs">
+    <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="registration.xaml.cs">
+    <Compile Include="Pages\registration.xaml.cs">
       <DependentUpon>registration.xaml</DependentUpon>
     </Compile>
-    <Compile Include="restaurantsTop.xaml.cs">
+    <Compile Include="Pages\restaurantsTop.xaml.cs">
       <DependentUpon>restaurantsTop.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -125,23 +125,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="allRestaurants.xaml">
+    <Page Include="Pages\allRestaurants.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CategoryPage.xaml">
+    <Page Include="Pages\CategoryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoginPage.xaml">
+    <Page Include="Pages\LoginPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="registration.xaml">
+    <Page Include="Pages\registration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="restaurantsTop.xaml">
+    <Page Include="Pages\restaurantsTop.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
