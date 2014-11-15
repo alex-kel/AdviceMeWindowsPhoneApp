@@ -1,4 +1,5 @@
 ﻿using adviceMe.Model;
+using PortableRest;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -40,17 +41,25 @@ namespace adviceMe.Api
             }
         }*/
 
-        public async static void doPost(Object obj, string path,String param, System.Type type, Object writeTo)
+        public async static void doPost(Object obj, string path, String param, System.Type type, Object writeTo)
         {
-            using (var client = new HttpClient())
+            /*using (var client = new HttpClient())
             {
-                
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 StringContent theContent = new StringContent(param, System.Text.Encoding.UTF8, "application/json"); 
                 HttpResponseMessage result = await client.PostAsync(requestURL(path),theContent);
                 writeTo = result.Content.ReadAsStringAsync().Result;
                 int debug = 0;
-            }
+            }*/
+
+            var client = new RestClient();
+            client.BaseUrl = URL;
+            var request = new RestRequest("/api/sessions.json", HttpMethod.Post);
+            request.AddParameter("password", "password");
+            request.AddParameter("email", "email@gmail.com");
+            client.ExecuteAsync(request, response=>
+            {
+                response.Content;
+            });
         }
 
         public async static void doGet(Object obj, string path, System.Type type, Object writeTo)

@@ -10,11 +10,9 @@ namespace adviceMe.Model
     [DataContract]
     class UserInfo
     {
-        public UserInfo(String name, String email, String password)
+        public UserInfo()
         {
-            this.name = name;
-            this.email = email;
-            this.password = password;
+
         }
         [DataMember]
         public String name;

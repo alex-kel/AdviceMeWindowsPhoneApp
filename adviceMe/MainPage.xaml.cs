@@ -1,4 +1,5 @@
 ﻿using adviceMe.Model;
+using PortableRest;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -59,10 +60,10 @@ namespace adviceMe
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             User user = new User("login", "email@gmail.co", "password");
-            String res = "";
+            UserInfo userInfo = new UserInfo();
             String param = Api.API.serialize(user, typeof(User));
             /*User userRes = Api.API.deserializeJSON<User>(res);*/
-            Api.API.doPost(user, "/users.json", param, typeof(User), res);
+            Api.API.doPost(user, "/users.json", param, typeof(User), userInfo);
             Frame.Navigate(typeof(registration));
         }
     }
