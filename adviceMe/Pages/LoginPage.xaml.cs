@@ -64,7 +64,7 @@ namespace adviceMe
             String param = Api.API.serialize(user, typeof(User));
             /*User userRes = Api.API.deserializeJSON<User>(res);*/
             Api.API.doPost(user, "/users.json", param, typeof(User), userInfo);
-            Frame.Navigate(typeof(CategoryPage));
+            Frame.Navigate(typeof(CameraPage));
         }
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
