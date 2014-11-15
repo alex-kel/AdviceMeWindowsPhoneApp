@@ -1,4 +1,5 @@
-﻿using System;
+﻿using adviceMe.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -58,6 +59,11 @@ namespace adviceMe
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            User user = new User("login", "email@gmail.co", "password");
+            String res = "";
+            String param = Api.API.serialize(user, typeof(User));
+            /*User userRes = Api.API.deserializeJSON<User>(res);*/
+            Api.API.doPost(user, "/users.json", param, typeof(User), res);
             Frame.Navigate(typeof(registration));
         }
 
