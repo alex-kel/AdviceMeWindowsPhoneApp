@@ -58,7 +58,7 @@ namespace adviceMe
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(CategoryPage));
+            Frame.Navigate(typeof(registration));
         }
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
