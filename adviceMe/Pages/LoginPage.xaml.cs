@@ -59,7 +59,7 @@ namespace adviceMe
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            User user = new User("login", "email@gmail.co", "password");
+            User user = new User("login", "email@gmaio.co", "password");
             UserInfo userInfo = new UserInfo();
             String param = Api.API.serialize(user, typeof(User));
             /*User userRes = Api.API.deserializeJSON<User>(res);*/

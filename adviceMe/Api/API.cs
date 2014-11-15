@@ -1,4 +1,5 @@
 ﻿using adviceMe.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,7 +16,7 @@ namespace adviceMe.Api
     class API
     {
 /*        public static String URL = "http://advisemeapp.herokuapp.com/api";*/
-        public static String URL = "http://10.1.78.132:3000/api";
+        public static String URL = "http://192.168.1.37:3000/api";
         public static String requestURL(String path)
         {
             return URL + path;
@@ -47,6 +48,7 @@ namespace adviceMe.Api
                 StringContent theContent = new StringContent(param, System.Text.Encoding.UTF8, "application/json"); 
                 HttpResponseMessage result = await client.PostAsync(requestURL(path),theContent);
                 writeTo = result.Content.ReadAsStringAsync().Result;
+                UserInfo user = UserInfo.desirialize(writeTo as string);
                 int debug = 0;
             }
         }
