@@ -25,7 +25,7 @@ namespace adviceMe.Model
 
         public static UserInfo desirialize(String json)
         {
-            return JsonConvert.DeserializeObject<UserInfo>(json.Substring(8, json.Length - 2));
+            return JsonConvert.DeserializeObject<UserInfo>(json.Substring(8, json.Length - 9));
         }
 
 

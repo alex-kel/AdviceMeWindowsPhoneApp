@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Phone.UI.Input;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу http://go.microsoft.com/fwlink/?LinkId=391641
 
@@ -59,13 +61,21 @@ namespace adviceMe
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            User user = new User("login", "email@gmaio.co", "password");
-            UserInfo userInfo = new UserInfo();
+            User user = new User("login", "email@gmaio.cos", "password");
+            //сериализовать в json
             String param = Api.API.serialize(user, typeof(User));
-            /*User userRes = Api.API.deserializeJSON<User>(res);*/
-            Api.API.doPost(user, "/users.json", param, typeof(User), userInfo);
+            /*changes - это callback*/
+            Api.API.doPost("/users.json", param).ContinueWith((requestTask) => changes(requestTask.Result));
             Frame.Navigate(typeof(CategoryPage));
         }
+
+        private object changes(HttpResponseMessage httpResponseMessage)
+        {
+            var json = httpResponseMessage.Content.ReadAsStringAsync().Result;
+            UserInfo user = UserInfo.desirialize(json as string);
+            return user;
+        }
+
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
         {

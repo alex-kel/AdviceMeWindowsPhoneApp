@@ -15,8 +15,8 @@ namespace adviceMe.Api
 {
     class API
     {
-/*        public static String URL = "http://advisemeapp.herokuapp.com/api";*/
-        public static String URL = "http://192.168.1.37:3000/api";
+        public static String URL = "http://advisemeapp.herokuapp.com/api";
+        /*public static String URL = "http://192.168.1.37:3000/api";*/
         public static String requestURL(String path)
         {
             return URL + path;
@@ -41,25 +41,21 @@ namespace adviceMe.Api
             }
         }*/
 
-        public async static void doPost(Object obj, string path, String param, System.Type type, Object writeTo)
+        public async static Task<HttpResponseMessage> doPost(Object obj, string path, String param)
         {
             using (var client = new HttpClient())
             {
                 StringContent theContent = new StringContent(param, System.Text.Encoding.UTF8, "application/json"); 
-                HttpResponseMessage result = await client.PostAsync(requestURL(path),theContent);
-                writeTo = result.Content.ReadAsStringAsync().Result;
-                UserInfo user = UserInfo.desirialize(writeTo as string);
-                int debug = 0;
+                return await client.PostAsync(requestURL(path),theContent);
             }
         }
 
-        public async static void doGet(Object obj, string path, System.Type type, Object writeTo)
+        public async static Task<HttpResponseMessage> doGet(Object obj, string path, String param)
         {
             using (var client = new HttpClient())
             {
-                HttpResponseMessage result = await client.GetAsync(requestURL(path));
-                writeTo = result.Content.ReadAsStringAsync().Result;
-                int debug = 0;
+                StringContent theContent = new StringContent(param, System.Text.Encoding.UTF8, "application/json");
+                return await client.GetAsync(requestURL(path));
             }
         }
 
@@ -73,16 +69,6 @@ namespace adviceMe.Api
                 string json = Encoding.UTF8.GetString(stream.ToArray(), 0, stream.ToArray().Length);
                 /*StreamReader sr = new StreamReader(stream);*/
                 return json ;
-            }
-        }
-
-        public static T deserializeJSON<T>(string json)
-        {
-            var instance = typeof(T);
-            using (var ms = new MemoryStream(Encoding.Unicode.GetBytes(json)))
-            {
-                DataContractJsonSerializer deserializer = new DataContractJsonSerializer(instance.GetType());
-                return (T)deserializer.ReadObject(ms);
             }
         }
 
