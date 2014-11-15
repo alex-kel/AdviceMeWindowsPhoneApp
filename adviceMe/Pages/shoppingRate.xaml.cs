@@ -15,14 +15,14 @@ using Windows.UI.Xaml.Navigation;
 
 // Документацию по шаблону элемента пустой страницы см. по адресу http://go.microsoft.com/fwlink/?LinkID=390556
 
-namespace adviceMe
+namespace adviceMe.Pages
 {
     /// <summary>
     /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
-    public sealed partial class CategoryPage : Page
+    public sealed partial class shoppingRate : Page
     {
-        public CategoryPage()
+        public shoppingRate()
         {
             this.InitializeComponent();
         }
@@ -34,26 +34,6 @@ namespace adviceMe
         /// Этот параметр обычно используется для настройки страницы.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-        }
-
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(restaurantsTop));
-        }
-
-        private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(restaurantsTop));
-        }
-
-        private void TextBlock_Tapped_1(object sender, TappedRoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(allRestaurants));
-        }
-
-        private void TextBlock_Tapped_2(object sender, TappedRoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(PhotoRate));
         }
     }
 }

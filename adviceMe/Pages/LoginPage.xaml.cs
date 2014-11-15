@@ -22,9 +22,9 @@ namespace adviceMe
     /// <summary>
     /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class LoginPage : Page
     {
-        public MainPage()
+        public LoginPage()
         {
             this.InitializeComponent();
 
@@ -64,7 +64,7 @@ namespace adviceMe
             String param = Api.API.serialize(user, typeof(User));
             /*User userRes = Api.API.deserializeJSON<User>(res);*/
             Api.API.doPost(user, "/users.json", param, typeof(User), userInfo);
-            Frame.Navigate(typeof(registration));
+            Frame.Navigate(typeof(CategoryPage));
         }
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)

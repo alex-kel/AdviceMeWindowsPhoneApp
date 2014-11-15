@@ -99,6 +99,9 @@
     </Compile>
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserInfo.cs" />
+    <Compile Include="PhotoRate.xaml.cs">
+      <DependentUpon>PhotoRate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\registration.xaml.cs">
       <DependentUpon>registration.xaml</DependentUpon>
@@ -142,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\restaurantsTop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PhotoRate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
