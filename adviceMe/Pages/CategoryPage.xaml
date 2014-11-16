@@ -75,7 +75,7 @@
     <Pivot  Title="adviceMe" FontFamily="./Fonts/Pacifico.ttf#Pacifico" Style="{StaticResource PivotStyle1}">
         <PivotItem Header="Restauraunts">
             <ListView x:Name="restaurantsMenu">
-                <TextBlock FontSize="30"  TextWrapping="Wrap" Text="Find restaurant by my location &gt;" Height="109" Width="362"/>
+                <TextBlock Tapped="TextBlock_Tapped_4" FontSize="30"  TextWrapping="Wrap" Text="Find restaurant by my location &gt;" Height="109" Width="362" SelectionChanged="TextBlock_SelectionChanged_1"/>
                 <TextBlock Tapped="TextBlock_Tapped_1" FontSize="30"  TextWrapping="Wrap" Text="Show all restaurants &gt;" Height="72" Width="362"/>
                 <TextBlock FontSize="30"  TextWrapping="Wrap" Text="Show TOP 10 &gt;" Height="72" Width="362" SelectionChanged="TextBlock_SelectionChanged" Tapped="TextBlock_Tapped"/>
 
@@ -83,7 +83,7 @@
         </PivotItem>
         <PivotItem Header="Shopping">
             <ListView x:Name="shoppingMenu">
-                <TextBlock FontSize="30"  TextWrapping="Wrap" Height="109" Width="362">
+                <TextBlock Tapped="TextBlock_Tapped_3" FontSize="30"  TextWrapping="Wrap" Height="109" Width="362">
                 	<Run/>
                 	<LineBreak/>
                 	<Run Text="Add photo for rate &gt;"/>

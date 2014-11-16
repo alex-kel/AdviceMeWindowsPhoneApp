@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Devices.Geolocation;
 
 // Документацию по шаблону элемента пустой страницы см. по адресу http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -54,6 +55,40 @@ namespace adviceMe
         private void TextBlock_Tapped_2(object sender, TappedRoutedEventArgs e)
         {
             Frame.Navigate(typeof(PhotoRate));
+        }
+
+        private void TextBlock_Tapped_3(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CameraPage));
+        }
+
+        async private void TextBlock_SelectionChanged_1(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        async private void TextBlock_Tapped_4(object sender, TappedRoutedEventArgs e)
+        {
+            //gps
+            Geolocator geolocator = new Geolocator();
+            geolocator.DesiredAccuracyInMeters = 50;
+            try
+            {
+                Geoposition geoposition = await geolocator.GetGeopositionAsync(
+                     maximumAge: TimeSpan.FromMinutes(5),
+                     timeout: TimeSpan.FromSeconds(10)
+                    );
+
+                string latitude = geoposition.Coordinate.Latitude.ToString("0.000000");
+                string longitude = geoposition.Coordinate.Longitude.ToString("0.000000");
+
+            }
+            //If an error is catch 2 are the main causes: the first is that you forgot to include ID_CAP_LOCATION in your app manifest. 
+            //The second is that the user doesn't turned on the Location Services
+            catch (Exception ex)
+            {
+                //exception
+            }
         }
     }
 }

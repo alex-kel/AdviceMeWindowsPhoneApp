@@ -82,11 +82,18 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <Content Include="Assets\BadgeLogo.scale-240.png" />
     <Content Include="Fonts\Pacifico.ttf" />
+    <Content Include="StoreManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\API.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PhotoPreviewPage.xaml.cs">
+      <DependentUpon>PhotoPreviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CameraPage.xaml.cs">
+      <DependentUpon>CameraPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\allRestaurants.xaml.cs">
       <DependentUpon>allRestaurants.xaml</DependentUpon>
@@ -99,7 +106,7 @@
     </Compile>
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserInfo.cs" />
-    <Compile Include="PhotoRate.xaml.cs">
+    <Compile Include="Pages\PhotoRate.xaml.cs">
       <DependentUpon>PhotoRate.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +135,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Pages\PhotoPreviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CameraPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\allRestaurants.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -148,7 +163,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PhotoRate.xaml">
+    <Page Include="Pages\PhotoRate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
