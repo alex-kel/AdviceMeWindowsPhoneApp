@@ -41,7 +41,7 @@ namespace adviceMe.Api
             }
         }*/
 
-        public async static Task<HttpResponseMessage> doPost(Object obj, string path, String param)
+        public async static Task<HttpResponseMessage> doPost(string path, String param)
         {
             using (var client = new HttpClient())
             {
@@ -50,7 +50,7 @@ namespace adviceMe.Api
             }
         }
 
-        public async static Task<HttpResponseMessage> doGet(Object obj, string path, String param)
+        public async static Task<HttpResponseMessage> doGet(string path, String param)
         {
             using (var client = new HttpClient())
             {
